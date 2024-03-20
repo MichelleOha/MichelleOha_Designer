@@ -29,6 +29,7 @@
         </ul>
       </nav>
     </header>
+
     <section>
       <div class="row">
         <div class="column">
@@ -47,36 +48,88 @@
             </div>
           </div>
         </div>
-        <br /><br />
         <div class="column">
           <h3 class="page-name">Portfolio</h3>
-          <h4 class="port-titles">MY WARDROBE</h4>
-          <img
-            class="me"
-            src="../assets/My wardrobe/protodesk1.png"
-            alt="ProtoType of desktop My Wardrobe"
-          />
-          <p class="mywarpara">
-            Sizing varies so much across different brands. International sizes
-            are different to Australia sizes, Australian sizes are different
-            across brands. <br /><br />
-            When I shop for clothing or footwear online, I’m always rushing off
-            to my wardrobe and trying to find an item of clothing from that
-            particular brand so I can then go back to my order and select the
-            correct size. <br /><br />
-            The purpose of MY WARDROBE is to store that information for us in an
-            app so you have reference to it there and then, saving you time
-            looking for it in your physical wardrobe.
-          </p>
-          <button
-            class="mywardrobe"
-            onclick="location.href='../document/MY WARDROBE - PROFILE 2024.pdf';"
-          >
-            My Wardrobe</button
-          ><br /><br />
+          <div>
+            <button type="button" class="collapsible">MY WARDROBE</button>
+            <div class="content">
+              <img
+                class="mw-image"
+                src="../assets/My wardrobe/mw.png"
+                alt="ProtoType of desktop My Wardrobe"
+              />
+              <p class="mywarpara">
+                Sizing varies so much across different brands. International
+                sizes are different to Australia sizes, Australian sizes are
+                different across brands. <br /><br />
+                When I shop for clothing or footwear online, I’m always rushing
+                off to my wardrobe and trying to find an item of clothing from
+                that particular brand so I can then go back to my order and
+                select the correct size. <br /><br />
+                The purpose of MY WARDROBE is to store that information for us
+                in an app so you have reference to it there and then, saving you
+                time looking for it in your physical wardrobe.
+              </p>
+              <button
+                class="mywardrobe"
+                onclick="location.href='../document/MY WARDROBE - PROFILE 2024.pdf';"
+              >
+                DOWNLOAD MY WARDROBE
+              </button>
+            </div>
+          </div>
+          <div>
+            <button type="button" class="collapsible">VCP WEBSITE</button>
+            <div class="content">
+              <img
+                class="vcp-image"
+                src="../assets/My wardrobe/vcp.png"
+                alt="ProtoType of desktop VCP"
+              />
+              <p class="mywarpara">
+                I have designed and create the website for VCP. <br /><br />
+                Liaising with the stakeholder and understanding their requirements, budget and needs, 
+                I created an HTML webpage that their potential and current clients can browse to learn more about their
+                practice, as well as the particular therapies provided, the location of the consulting room, 
+                and the contact information.
+                <br /><br />
+              </p>
+              <a href="https://www.vantageclinicalpsychology.com.au/">
+                <button class="mywardrobe">VISIT VCP WEBSITE</button>
+              </a>
+            </div>
+          </div>
+          <button type="button" class="collapsible">MY PORTFOLIO WEBSITE</button>
+            <div class="content">
+              <p class="mywarpara">
+                I designed and created this website using HTML and CSS <br /><br />
+                I wanted to exhibit my skill set in developing a website from scratch.  <br /><br />
+                This is in the first stage of development, the MVP and will be continuously worked on.
+                I have experience working in an agile environment with iterations, meaning there is constant
+                evaluation and adjustment of project goals, creating a flexible, collaborative process with 
+                quick turnaround when things change or are updated.
+              </p>
         </div>
       </div>
     </section>
-    <footer>&#169;Copyright 2022</footer>
+
+    <script>
+      var coll = document.getElementsByClassName("collapsible");
+      var i;
+
+      for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function () {
+          this.classList.toggle("active");
+          var content = this.nextElementSibling;
+          if (content.style.maxHeight) {
+            content.style.maxHeight = null;
+          } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+          }
+        });
+      }
+    </script>
+
+    <footer>&#169;Copyright 2024. All rights reserved</footer>
   </body>
 </html>
