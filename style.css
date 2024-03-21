@@ -307,6 +307,14 @@ footer {
   width: 50%;
 }
 
+.jacket{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    width: 65%;
+}
+
 .experience {
     font-size: var(--font3);
     color: var(--primary1);
