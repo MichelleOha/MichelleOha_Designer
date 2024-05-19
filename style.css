@@ -324,6 +324,63 @@ footer {
     text-align: center;
   }
 
+  .carousel {
+    width:100vw;
+    height: 100vh;
+    position: relative;
+  }
+
+  .slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+  }
+
+  .slide > img {
+    display: block;
+    width: 80%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .slide[data-active] {
+    opacity: 1;
+  }
+
+  .carousel-button {
+    position: absolute;
+    z-index: 2;
+    background: none;
+    border: none;
+    font-size: 2.5rem;
+    top: 15%;
+    transform: translate(-50%);
+    cursor: pointer;
+    border-radius: .25rem;
+    padding: 0 .5rem;
+    color: var(--primary1)
+    /* background-color: rgba(0, 0, 0, .1); */
+  }
+
+  .carousel-button:hover,
+  .carousel-button:focus {
+    color: var(--neutral1);
+    /* background-color: rgba(0, 0, 0, .2); */
+  }
+
+  /* .carousel-button:focus {
+    outline: 1px solid #000;
+  } */
+
+  .carousel-button.prev {
+    left: 1.5rem;
+  }
+
+  .carousel-button.next {
+    right: 1.5rem;
+  }
+
+
   /* contact */
 
   .form {
@@ -520,4 +577,26 @@ footer {
       display: table;
       clear: both;
     }
+
+    .slide > img {
+      display: block;
+      width: 40%;
+      object-fit: cover;
+      object-position: center;
+      max-width: 991px;
+      margin-left: 50px;
+      margin-right: auto;
+      margin-top: 280px;
+    }
+
+  .carousel-button.next {
+    position:fixed;
+      right: 45rem;
+      margin-top: 288px;
+  }
+
+  .carousel-button.prev {
+    left: 1.5rem;
+    margin-top: 290px;
+  }
 }
